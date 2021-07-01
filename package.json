@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js --ignore sessions"
+    "dev": "nodemon server.js --ignore sessions",
+    "statr": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -28,5 +29,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
+  },
+  "engines": {
+    "node": "14.16.1"
   }
 }
