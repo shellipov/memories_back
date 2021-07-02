@@ -1,13 +1,17 @@
 {
   "name": "backend",
   "version": "1.0.0",
+  "homepage": "https://shellipov.github.io/memories_back/",
   "description": "",
   "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js --ignore sessions",
-    "statr": "node server.js"
+    "build": "npm-run-all clean transpile",
+    "statr": "node server.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +25,7 @@
     "express-fileupload": "^1.2.1",
     "express-server": "^0.7.0",
     "express-session": "^1.17.1",
+    "gh-pages": "^3.2.3",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.28",
     "node-fetch": "^2.6.0",
