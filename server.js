@@ -22,7 +22,7 @@ mongoose.connect(
   }
 );
 
-app.use(cors({ origin: "https://shellipov.github.io/", credentials: true }));
+app.use(cors({ origin: ["https://shellipov.github.io", 'https://shellipov.github.io/memories_front/#/auth' ], credentials: true }));
 
 app.use(express.json());
 
